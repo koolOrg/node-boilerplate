@@ -1,10 +1,10 @@
-const express = require('express');
-const authRoute = require('./auth.route');
-const userRoute = require('./user.route');
-const docsRoute = require('./docs.route');
-const config = require('../../config/config');
+import { Router } from 'express';
+import authRoute from './auth.route';
+import userRoute from './user.route';
+import docsRoute from './docs.route';
+import { env } from '../../config/config';
 
-const router = express.Router();
+const router = Router();
 
 const defaultRoutes = [
   {
@@ -30,10 +30,10 @@ defaultRoutes.forEach((route) => {
 });
 
 /* istanbul ignore next */
-if (config.env === 'development') {
+if (env === 'development') {
   devRoutes.forEach((route) => {
     router.use(route.path, route.route);
   });
 }
 
-module.exports = router;
+export default router;
