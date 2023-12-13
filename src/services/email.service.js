@@ -1,10 +1,10 @@
-const nodemailer = require('nodemailer');
-const config = require('../config/config');
-const logger = require('../config/logger');
+import { createTransport } from 'nodemailer';
+import { email, env } from '../config/config';
+import logger from '../config/logger';
 
-const transport = nodemailer.createTransport(config.email.smtp);
+const transport = createTransport(email.smtp);
 /* istanbul ignore next */
-if (config.env !== 'test') {
+if (env !== 'test') {
   transport
     .verify()
     .then(() => logger.info('Connected to email server'))
@@ -19,7 +19,7 @@ if (config.env !== 'test') {
  * @returns {Promise}
  */
 const sendEmail = async (to, subject, text) => {
-  const msg = { from: config.email.from, to, subject, text };
+  const msg = { from: email.from, to, subject, text };
   await transport.sendMail(msg);
 };
 
@@ -55,7 +55,7 @@ If you did not create an account, then ignore this email.`;
   await sendEmail(to, subject, text);
 };
 
-module.exports = {
+export default {
   transport,
   sendEmail,
   sendResetPasswordEmail,
