@@ -1,16 +1,14 @@
 import Sequelize from 'sequelize';
-import { config } from 'dotenv';
 import User from './schema/User';
 import Token from './schema/Token';
-
-config();
+import { mysql } from '../config/config';
 
 const db = {};
 const models = {
   User,
   Token,
 };
-const sequelize = new Sequelize(process.env.DB_URL, {
+const sequelize = new Sequelize(mysql.url, {
   dialect: 'mysql',
   logging: true,
   pool: {
