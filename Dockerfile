@@ -1,15 +1,10 @@
-FROM node:alpine
-
-RUN mkdir -p /usr/src/node-app && chown -R node:node /usr/src/node-app
-
-WORKDIR /usr/src/node-app
-
-COPY package.json yarn.lock ./
-
-USER node
-
-RUN yarn install --pure-lockfile
-
-COPY --chown=node:node . .
-
-EXPOSE 3000
+FROM node:18-alpine as builder
+WORKDIR /app
+COPY package.json .
+RUN npm install
+FROM node:18-alpine
+WORKDIR /app
+COPY --from=builder /app/node_modules ./node_modules
+COPY . .
+RUN npm run build
+CMD ["node", "dist/index.js"]
