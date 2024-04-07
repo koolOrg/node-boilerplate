@@ -13,6 +13,7 @@ const { authLimiter } = require('./middlewares/rateLimiter');
 const routes = require('./routes/v1');
 const { errorConverter, errorHandler } = require('./middlewares/error');
 const ApiError = require('./utils/ApiError');
+const cookieParser = require('cookie-parser');
 
 const app = express();
 
@@ -34,12 +35,18 @@ app.use(express.urlencoded({ extended: true }));
 app.use(xss());
 app.use(mongoSanitize());
 
+app.use(cookieParser())
+
 // gzip compression
 app.use(compression());
-
+const corsOptions = {
+  origin: 'http://localhost:5000', // or use an array of origins if you have multiple clients
+  credentials: true, // to allow cookies and credentials
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+};
 // enable cors
-app.use(cors());
-app.options('*', cors());
+app.use(cors(corsOptions));
+// app.options('*', cors());
 
 // jwt authentication
 app.use(passport.initialize());

@@ -4,6 +4,7 @@ const userService = require('./user.service');
 const Token = require('../models/token.model');
 const ApiError = require('../utils/ApiError');
 const { tokenTypes } = require('../config/tokens');
+const { ref } = require('joi');
 
 /**
  * Login with username and password
@@ -25,6 +26,7 @@ const loginUserWithEmailAndPassword = async (email, password) => {
  * @returns {Promise}
  */
 const logout = async (refreshToken) => {
+  console.log(refreshToken)
   const refreshTokenDoc = await Token.findOne({ token: refreshToken, type: tokenTypes.REFRESH, blacklisted: false });
   if (!refreshTokenDoc) {
     throw new ApiError(httpStatus.NOT_FOUND, 'Not found');
@@ -71,6 +73,16 @@ const resetPassword = async (resetPasswordToken, newPassword) => {
   }
 };
 
+const verifyToken = async (token) => {
+  try{
+      const tokens = await tokenService.verifyToken(token, tokenTypes.REFRESH);
+      return tokens;
+  } catch (error) {
+    throw new ApiError(httpStatus.UNAUTHORIZED, 'Token is invalid');
+
+  }
+}
+
 /**
  * Verify email
  * @param {string} verifyEmailToken
@@ -96,4 +108,5 @@ module.exports = {
   refreshAuth,
   resetPassword,
   verifyEmail,
+  verifyToken
 };
