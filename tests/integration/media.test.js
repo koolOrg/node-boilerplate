@@ -46,13 +46,13 @@ describe('Media routes', () => {
 
       await insertUsers([userOne]);
 
-       await request(app)
+      await request(app)
         .post('/v1/media/upload-file')
         .set('Authorization', `Bearer ${userOneAccessToken}`)
         .attach('file', filePath)
         .expect(httpStatus.BAD_REQUEST);
 
-       await deleteTestFile(filePath);
+      await deleteTestFile(filePath);
     });
   });
 
