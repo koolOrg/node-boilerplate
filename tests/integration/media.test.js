@@ -3,7 +3,7 @@ const httpStatus = require('http-status');
 const path = require('path');
 const app = require('../../src/app');
 const setupTestDB = require('../utils/setupTestDB');
-const { readTestFile, deleteTestFile } = require('../utils/files');
+const { generateTestFile, readTestFile, deleteTestFile } = require('../utils/files');
 const { insertUsers, userOne } = require('../fixtures/user.fixture');
 const { userOneAccessToken } = require('../fixtures/token.fixture');
 const config = require('../../src/config/config');
@@ -39,6 +39,20 @@ describe('Media routes', () => {
 
     test('should return 401 if user is not authenticated', async () => {
       await request(app).post('/v1/media/upload-file').attach('file', file).expect(httpStatus.UNAUTHORIZED);
+    });
+
+    test('should return 400 if file is not allowed', async () => {
+      const filePath = await generateTestFile();
+
+      await insertUsers([userOne]);
+
+       await request(app)
+        .post('/v1/media/upload-file')
+        .set('Authorization', `Bearer ${userOneAccessToken}`)
+        .attach('file', filePath)
+        .expect(httpStatus.BAD_REQUEST);
+
+       await deleteTestFile(filePath);
     });
   });
 

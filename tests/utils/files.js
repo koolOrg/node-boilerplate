@@ -10,11 +10,18 @@ const readTestFile = async () => {
   return fs.createReadStream(imagePath);
 };
 
+const generateTestFile = async () => {
+  const filePath = path.join(__dirname, '..', 'fixtures', 'testFile.txt');
+  await promisify(fs.writeFile)(filePath, 'Test content');
+  return filePath;
+};
+
 const deleteTestFile = async (filePath) => {
   await unlink(filePath);
 };
 
 module.exports = {
+  generateTestFile,
   readTestFile,
   deleteTestFile,
 };
