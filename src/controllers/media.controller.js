@@ -10,7 +10,7 @@ const uploadFile = catchAsync(async (req, res) => {
 });
 
 const getMediaFile = catchAsync(async (req, res) => {
-  const file = await mediaService.getFileByName(req.params.id);
+  const file = await mediaService.getFileByName(req.params.filename);
   if (!file) {
     throw new ApiError(httpStatus.NOT_FOUND, 'File not found');
   }

@@ -34,7 +34,7 @@ module.exports = router;
  *           schema:
  *             type: object
  *             properties:
- *               File:
+ *               file:
  *                 type: string
  *                 format: binary
  *     responses:
