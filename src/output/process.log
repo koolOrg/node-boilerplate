@@ -1,0 +1,248 @@
+2024-05-03T23:15:35.880Z info: Adjusting audio speed - Input: /app/src/input/audio/CityCostCruise/662e867399407f00320adbdd.mp3, Output: /app/src/input/audio/CityCostCruise/662e867399407f00320adbdd/1.mp3, Speed: 1
+2024-05-03T23:15:35.918Z info: Audio duration obtained - audioPath: /app/src/input/audio/CityCostCruise/662e867399407f00320adbdd.mp3, duration: 241.92
+2024-05-03T23:15:35.919Z info: Input Audio duration: 241.92
+2024-05-03T23:15:40.748Z info: Audio speed adjusted successfully - Saved to /app/src/input/audio/CityCostCruise/662e867399407f00320adbdd/1.mp3
+2024-05-03T23:19:45.596Z info: Adjusting audio speed - Input: /app/src/input/audio/CityCostCruise/662e867399407f00320adbdd.mp3, Output: /app/src/input/audio/CityCostCruise/662e867399407f00320adbdd/1.mp3, Speed: 1
+2024-05-03T23:19:45.620Z info: Audio duration obtained - audioPath: /app/src/input/audio/CityCostCruise/662e867399407f00320adbdd.mp3, duration: 241.92
+2024-05-03T23:19:45.621Z info: Input Audio duration: 241.92
+2024-05-03T23:19:50.269Z info: Audio speed adjusted successfully - Saved to /app/src/input/audio/CityCostCruise/662e867399407f00320adbdd/1.mp3
+2024-05-03T23:20:37.445Z info: Adjusting audio speed - Input: /app/src/input/audio/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd.mp3, Output: /app/src/input/audio/CityCostCruise/662e867399407f00320adbdd/1.mp3, Speed: 1
+2024-05-03T23:20:37.541Z info: Audio duration obtained - audioPath: /app/src/input/audio/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd.mp3, duration: 302.367313
+2024-05-03T23:20:37.542Z info: Input Audio duration: 302.367313
+2024-05-03T23:20:46.744Z info: Audio speed adjusted successfully - Saved to /app/src/input/audio/CityCostCruise/662e867399407f00320adbdd/1.mp3
+2024-05-03T23:21:10.861Z info: Adjusting audio speed - Input: /app/src/input/audio/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd.mp3, Output: /app/src/input/audio/CityCostCruise/662e867399407f00320adbdd/1.25.mp3, Speed: 1.25
+2024-05-03T23:21:10.929Z info: Audio duration obtained - audioPath: /app/src/input/audio/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd.mp3, duration: 302.367313
+2024-05-03T23:21:10.929Z info: Input Audio duration: 302.367313
+2024-05-03T23:21:21.867Z info: Audio speed adjusted successfully - Saved to /app/src/input/audio/CityCostCruise/662e867399407f00320adbdd/1.25.mp3
+2024-05-03T23:22:23.849Z info: Processing media{
+  "id": "662e867399407f00320adbdd",
+  "title": "Cost of Living USA",
+  "filetype": "png",
+  "character": "Cincinnati",
+  "genre": "energetic",
+  "channel": "CityCostCruise",
+  "isYoutube": true
+}
+2024-05-03T23:22:23.885Z info: Audio duration obtained - audioPath: /app/src/input/audio/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd.mp3, duration: 241.92
+2024-05-03T23:22:23.886Z info: Syncing audio and video length - videoPath: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-final-Vonly.mp4, audioPath: /app/src/input/audio/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd.mp3, outputPath: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-temp.mp4
+2024-05-03T23:22:23.973Z info: Audio duration obtained - audioPath: /app/src/input/audio/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd.mp3, duration: 241.92
+2024-05-03T23:22:24.039Z info: Video duration: 244.142, Audio duration: 241.92
+2024-05-03T23:22:24.040Z info: Cutting video from 0 to 241.92 seconds - videoPath: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-final-Vonly.mp4, outputPath: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-temp.mp4
+2024-05-03T23:25:41.717Z info: Video cut successfully
+2024-05-03T23:25:41.718Z info: Adding audio to video - Video Path: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-temp.mp4, Audio Path: /app/src/input/audio/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd.mp3, Output Path: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd.mp4
+2024-05-03T23:25:46.708Z info: Audio added to video successfully{"outputPath":"/app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd.mp4"}
+2024-05-03T23:25:46.717Z info: Adding logo and title to video: {
+  "videoPath": "/app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd.mp4",
+  "logoPath": "/app/src/input/image/CityCostCruise/logo.png",
+  "title": "Cost of Living USA",
+  "finalOutputPath": "/app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-final.mp4",
+  "filetype": "png",
+  "character": "Cincinnati",
+  "videoDuration": {},
+  "channel": "CityCostCruise"
+}
+2024-05-03T23:28:48.621Z info: Final video with logo and title added successfully
+2024-05-03T23:28:48.636Z info: Video duration after adding logo and title:[object Promise]
+2024-05-03T23:28:48.822Z info: Adding subtitles to video:{
+  "videoPath": "/app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-final.mp4",
+  "subtitledDir": "/app/src/output/video/CityCostCruise/662e867399407f00320adbdd/subtitled"
+}
+2024-05-03T23:28:48.873Z info: Final video duration obtained{
+  "finalOutputPath": "/app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-final.mp4",
+  "duration": 241.942
+}
+2024-05-03T23:38:46.255Z info: Subtitles added successfully:{
+  "subtitledDir": "/app/src/output/video/CityCostCruise/662e867399407f00320adbdd/subtitled"
+}
+2024-05-03T23:38:46.256Z info: Adding background music to video{
+  "videoPath": "/app/src/output/video/CityCostCruise/662e867399407f00320adbdd/subtitled/662e867399407f00320adbdd-final.mp4",
+  "musicPath": "/app/src/input/audio/background/background-energetic.mp3",
+  "outputPath": "/app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-final-bg.mp4"
+}
+2024-05-03T23:38:52.820Z info: Background music added successfully: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-final-bg.mp4
+2024-05-03T23:38:52.917Z info: Video duration obtained: 241.942 - videoPath: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-final-bg.mp4
+2024-05-03T23:38:52.918Z info: Splitting video into parts - videoPath: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-final-bg.mp4, outputDir: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd, duration: 241.942, partDuration: 51, numParts: 5
+2024-05-03T23:38:52.918Z info: Splitting part 1: Start at 0 seconds, end at 51 seconds
+2024-05-03T23:38:52.918Z info: Splitting part 2: Start at 51 seconds, end at 102 seconds
+2024-05-03T23:38:52.918Z info: Splitting part 3: Start at 102 seconds, end at 153 seconds
+2024-05-03T23:38:52.918Z info: Splitting part 4: Start at 153 seconds, end at 204 seconds
+2024-05-03T23:38:52.918Z info: Splitting part 5: Start at 204 seconds, end at 241.942 seconds
+2024-05-03T23:39:40.953Z info: Processed part #1 successfully: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/part-1.mp4
+2024-05-03T23:40:28.660Z info: Processed part #2 successfully: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/part-2.mp4
+2024-05-03T23:41:20.740Z info: Processed part #3 successfully: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/part-3.mp4
+2024-05-03T23:41:42.026Z info: Processed part #4 successfully: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/part-4.mp4
+2024-05-03T23:42:41.464Z info: Processed part #5 successfully: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/part-5.mp4
+2024-05-03T23:42:41.465Z info: All parts processed successfully.
+2024-05-03T23:42:41.466Z info: Media processing completed successfully
+2024-05-04T00:18:16.869Z info: Cutting video from 7 to 215 seconds - videoPath: /app/src/input/video/CityCostCruise/662e867399407f00320adbdd/youtube/662e867399407f00320adbdd.mp4, outputPath: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/segment/1.mp4
+2024-05-04T00:34:30.295Z info: Video cut successfully
+2024-05-04T00:35:09.004Z info: Concatenating videos in /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/segment to /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-final-Vonly.mp4
+2024-05-04T00:35:09.023Z info: File list created successfully at /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/segment/filelist.txt, containing 1 files.
+2024-05-04T00:35:14.800Z info: Videos concatenated successfully
+2024-05-04T00:35:14.810Z info: Merged Video Output file: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-final-Vonly.mp4
+2024-05-04T00:35:15.027Z info: Concatenated video duration: 208 seconds
+2024-05-04T00:36:14.318Z info: Processing media{
+  "id": "662e867399407f00320adbdd",
+  "title": "Cost of Living USA",
+  "filetype": "png",
+  "character": "Cincinnati",
+  "genre": "energetic",
+  "channel": "CityCostCruise",
+  "isYoutube": true
+}
+2024-05-04T00:36:14.403Z info: Audio duration obtained - audioPath: /app/src/input/audio/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd.mp3, duration: 241.92
+2024-05-04T00:36:14.404Z info: Syncing audio and video length - videoPath: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-final-Vonly.mp4, audioPath: /app/src/input/audio/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd.mp3, outputPath: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-temp.mp4
+2024-05-04T00:36:14.464Z info: Audio duration obtained - audioPath: /app/src/input/audio/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd.mp3, duration: 241.92
+2024-05-04T00:36:14.549Z info: Video duration: 208, Audio duration: 241.92
+2024-05-04T00:36:14.550Z info: Looping or cutting video to match audio length - videoPath: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-final-Vonly.mp4, outputPath: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-temp.mp4, audioDuration: 241.92
+2024-05-04T00:50:38.288Z info: Video processed successfully - outputPath: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-temp.mp4
+2024-05-04T00:50:38.291Z info: Adding audio to video - Video Path: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-temp.mp4, Audio Path: /app/src/input/audio/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd.mp3, Output Path: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd.mp4
+2024-05-04T00:50:47.097Z info: Audio added to video successfully{"outputPath":"/app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd.mp4"}
+2024-05-04T00:50:47.114Z info: Adding logo and title to video: {
+  "videoPath": "/app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd.mp4",
+  "logoPath": "/app/src/input/image/CityCostCruise/logo.png",
+  "title": "Cost of Living USA",
+  "finalOutputPath": "/app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-final.mp4",
+  "filetype": "png",
+  "character": "Cincinnati",
+  "videoDuration": {},
+  "channel": "CityCostCruise"
+}
+2024-05-04T01:06:17.055Z info: Final video with logo and title added successfully
+2024-05-04T01:06:17.073Z info: Video duration after adding logo and title:[object Promise]
+2024-05-04T01:06:17.096Z info: Adding subtitles to video:{
+  "videoPath": "/app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-final.mp4",
+  "subtitledDir": "/app/src/output/video/CityCostCruise/662e867399407f00320adbdd/subtitled"
+}
+2024-05-04T01:06:17.666Z info: Final video duration obtained{
+  "finalOutputPath": "/app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-final.mp4",
+  "duration": 242.952
+}
+2024-05-04T01:24:20.972Z info: Subtitles added successfully:{
+  "subtitledDir": "/app/src/output/video/CityCostCruise/662e867399407f00320adbdd/subtitled"
+}
+2024-05-04T01:24:20.974Z info: Adding background music to video{
+  "videoPath": "/app/src/output/video/CityCostCruise/662e867399407f00320adbdd/subtitled/662e867399407f00320adbdd-final.mp4",
+  "musicPath": "/app/src/input/audio/background/background-energetic.mp3",
+  "outputPath": "/app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-final-bg.mp4"
+}
+2024-05-04T01:24:31.606Z info: Background music added successfully: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-final-bg.mp4
+2024-05-04T01:24:31.885Z info: Video duration obtained: 242.952 - videoPath: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-final-bg.mp4
+2024-05-04T01:24:31.887Z info: Splitting video into parts - videoPath: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-final-bg.mp4, outputDir: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd, duration: 242.952, partDuration: 51, numParts: 5
+2024-05-04T01:24:31.887Z info: Splitting part 1: Start at 0 seconds, end at 51 seconds
+2024-05-04T01:24:31.888Z info: Splitting part 2: Start at 51 seconds, end at 102 seconds
+2024-05-04T01:24:31.888Z info: Splitting part 3: Start at 102 seconds, end at 153 seconds
+2024-05-04T01:24:31.888Z info: Splitting part 4: Start at 153 seconds, end at 204 seconds
+2024-05-04T01:24:31.888Z info: Splitting part 5: Start at 204 seconds, end at 242.952 seconds
+2024-05-04T01:27:25.434Z info: Processed part #1 successfully: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/part-1.mp4
+2024-05-04T01:29:51.856Z info: Processed part #2 successfully: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/part-2.mp4
+2024-05-04T01:32:37.697Z info: Processed part #3 successfully: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/part-3.mp4
+2024-05-04T01:36:25.692Z info: Processed part #4 successfully: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/part-4.mp4
+2024-05-04T01:38:29.937Z info: Processed part #5 successfully: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/part-5.mp4
+2024-05-04T01:38:29.938Z info: All parts processed successfully.
+2024-05-04T01:38:29.938Z info: Media processing completed successfully
+2024-05-05T16:00:09.863Z info: Adjusting audio speed - Input: /app/src/input/audio/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd.mp3, Output: /app/src/input/audio/CityCostCruise/662e867399407f00320adbdd/1.25.mp3, Speed: 1.25
+2024-05-05T16:00:10.326Z info: Audio duration obtained - audioPath: /app/src/input/audio/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd.mp3, duration: 271.516688
+2024-05-05T16:00:10.336Z info: Input Audio duration: 271.516688
+2024-05-05T16:00:23.897Z info: Audio speed adjusted successfully - Saved to /app/src/input/audio/CityCostCruise/662e867399407f00320adbdd/1.25.mp3
+2024-05-05T16:10:00.913Z info: Processing media{
+  "id": "662e867399407f00320adbdd",
+  "title": "Cost of Living in the USA",
+  "filetype": "png",
+  "character": "Cincinnati",
+  "genre": "energetic",
+  "channel": "CityCostCruise",
+  "isYoutube": true
+}
+2024-05-05T16:10:01.286Z info: Audio duration obtained - audioPath: /app/src/input/audio/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd.mp3, duration: 217.260408
+2024-05-05T16:10:01.288Z info: Syncing audio and video length - videoPath: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-final-Vonly.mp4, audioPath: /app/src/input/audio/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd.mp3, outputPath: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-temp.mp4
+2024-05-05T16:10:01.409Z info: Audio duration obtained - audioPath: /app/src/input/audio/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd.mp3, duration: 217.260408
+2024-05-05T16:10:01.783Z info: Video duration: 208, Audio duration: 217.260408
+2024-05-05T16:10:01.785Z info: Looping or cutting video to match audio length - videoPath: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-final-Vonly.mp4, outputPath: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-temp.mp4, audioDuration: 217.260408
+2024-05-05T16:42:37.465Z info: Video processed successfully - outputPath: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-temp.mp4
+2024-05-05T16:42:37.476Z info: Adding audio to video - Video Path: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-temp.mp4, Audio Path: /app/src/input/audio/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd.mp3, Output Path: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd.mp4
+2024-05-05T16:42:55.379Z info: Audio added to video successfully{"outputPath":"/app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd.mp4"}
+2024-05-05T16:42:55.397Z info: Adding logo and title to video: {
+  "videoPath": "/app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd.mp4",
+  "logoPath": "/app/src/input/image/CityCostCruise/logo.png",
+  "title": "Cost of Living in the USA",
+  "finalOutputPath": "/app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-final.mp4",
+  "filetype": "png",
+  "character": "Cincinnati",
+  "videoDuration": {},
+  "channel": "CityCostCruise"
+}
+2024-05-05T17:15:00.993Z info: Final video with logo and title added successfully
+2024-05-05T17:15:01.033Z info: Video duration after adding logo and title:[object Promise]
+2024-05-05T17:15:01.183Z info: Adding subtitles to video:{
+  "videoPath": "/app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-final.mp4",
+  "subtitledDir": "/app/src/output/video/CityCostCruise/662e867399407f00320adbdd/subtitled"
+}
+2024-05-05T17:15:01.633Z info: Final video duration obtained{
+  "finalOutputPath": "/app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-final.mp4",
+  "duration": 218.302
+}
+2024-05-05T17:49:08.482Z info: Processing media{
+  "id": "662e867399407f00320adbdd",
+  "title": "Cost of Living in the USA",
+  "filetype": "png",
+  "character": "Cincinnati",
+  "genre": "energetic",
+  "channel": "CityCostCruise",
+  "isYoutube": true
+}
+2024-05-05T17:49:08.606Z info: Audio duration obtained - audioPath: /app/src/input/audio/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd.mp3, duration: 217.260408
+2024-05-05T17:49:08.607Z info: Syncing audio and video length - videoPath: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-final-Vonly.mp4, audioPath: /app/src/input/audio/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd.mp3, outputPath: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-temp.mp4
+2024-05-05T17:49:08.655Z info: Audio duration obtained - audioPath: /app/src/input/audio/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd.mp3, duration: 217.260408
+2024-05-05T17:49:08.719Z info: Video duration: 208, Audio duration: 217.260408
+2024-05-05T17:49:08.720Z info: Looping or cutting video to match audio length - videoPath: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-final-Vonly.mp4, outputPath: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-temp.mp4, audioDuration: 217.260408
+2024-05-05T18:12:04.162Z info: Video processed successfully - outputPath: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-temp.mp4
+2024-05-05T18:12:04.169Z info: Adding audio to video - Video Path: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-temp.mp4, Audio Path: /app/src/input/audio/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd.mp3, Output Path: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd.mp4
+2024-05-05T18:12:11.670Z info: Audio added to video successfully{"outputPath":"/app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd.mp4"}
+2024-05-05T18:12:11.684Z info: Adding logo and title to video: {
+  "videoPath": "/app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd.mp4",
+  "logoPath": "/app/src/input/image/CityCostCruise/logo.png",
+  "title": "Cost of Living in the USA",
+  "finalOutputPath": "/app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-final.mp4",
+  "filetype": "png",
+  "character": "Cincinnati",
+  "videoDuration": {},
+  "channel": "CityCostCruise"
+}
+2024-05-05T18:32:17.500Z info: Final video with logo and title added successfully
+2024-05-05T18:32:17.525Z info: Video duration after adding logo and title:[object Promise]
+2024-05-05T18:32:17.573Z info: Adding subtitles to video:{
+  "videoPath": "/app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-final.mp4",
+  "subtitledDir": "/app/src/output/video/CityCostCruise/662e867399407f00320adbdd/subtitled"
+}
+2024-05-05T18:32:17.753Z info: Final video duration obtained{
+  "finalOutputPath": "/app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-final.mp4",
+  "duration": 218.302
+}
+2024-05-05T18:53:50.922Z info: Subtitles added successfully:{
+  "subtitledDir": "/app/src/output/video/CityCostCruise/662e867399407f00320adbdd/subtitled"
+}
+2024-05-05T18:53:50.930Z info: Adding background music to video{
+  "videoPath": "/app/src/output/video/CityCostCruise/662e867399407f00320adbdd/subtitled/662e867399407f00320adbdd-final.mp4",
+  "musicPath": "/app/src/input/audio/background/background-energetic.mp3",
+  "outputPath": "/app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-final-bg.mp4"
+}
+2024-05-05T18:54:14.018Z info: Background music added successfully: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-final-bg.mp4
+2024-05-05T18:54:14.676Z info: Video duration obtained: 218.302 - videoPath: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-final-bg.mp4
+2024-05-05T18:54:14.679Z info: Splitting video into parts - videoPath: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/662e867399407f00320adbdd-final-bg.mp4, outputDir: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd, duration: 218.302, partDuration: 60, numParts: 4
+2024-05-05T18:54:14.682Z info: Splitting part 1: Start at 0 seconds, end at 60 seconds
+2024-05-05T18:54:14.683Z info: Splitting part 2: Start at 60 seconds, end at 120 seconds
+2024-05-05T18:54:14.683Z info: Splitting part 3: Start at 120 seconds, end at 180 seconds
+2024-05-05T18:54:14.683Z info: Splitting part 4: Start at 180 seconds, end at 218.302 seconds
+2024-05-05T18:59:52.350Z info: Processed part #1 successfully: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/part-1.mp4
+2024-05-05T19:03:25.577Z info: Processed part #2 successfully: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/part-2.mp4
+2024-05-05T19:08:27.889Z info: Processed part #3 successfully: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/part-3.mp4
+2024-05-05T19:11:06.448Z info: Processed part #4 successfully: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/part-4.mp4
+2024-05-05T19:11:06.448Z info: All parts processed successfully.
+2024-05-05T19:11:06.448Z info: Media processing completed successfully
+2024-05-10T23:54:42.102Z info: Cutting video from 128 to 185 seconds - videoPath: /app/src/input/video/CityCostCruise/662e867399407f00320adbdd/youtube/662e867399407f00320adbdd.mp4, outputPath: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/segment/22.mp4
+2024-05-10T23:57:12.546Z info: Video cut successfully
+2024-05-11T00:10:38.894Z info: Cutting video from 128 to 185 seconds - videoPath: /app/src/input/video/CityCostCruise/662e867399407f00320adbdd/youtube/662e867399407f00320adbdd.mp4, outputPath: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/segment/22.mp4
+2024-05-11T00:12:44.251Z info: Video cut successfully
+2024-05-11T02:35:12.806Z info: Cutting video from 128 to 148 seconds - videoPath: /app/src/input/video/CityCostCruise/662e867399407f00320adbdd/youtube/662e867399407f00320adbdd.mp4, outputPath: /app/src/output/video/CityCostCruise/662e867399407f00320adbdd/segment/24.mp4
+2024-05-11T02:36:08.916Z info: Video cut successfully

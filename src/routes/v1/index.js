@@ -4,7 +4,13 @@ const userRoute = require('./user.route');
 const docsRoute = require('./docs.route');
 const contentRoute = require('./content.route');
 const conversionRoute = require('./conversion.route');
+const contentHistoryRoute = require('./contenthistory.route');
+const serialKillerRoute = require('./serialkiller.route');
+// const openaiRoute = require('./openai.route');
+const openaiRoute = require('./openai.route');
 const config = require('../../config/config');
+const otherRoute = require('./other.route');
+const costOfLivingRoute = require('./costofliving.route');
 
 const router = express.Router();
 
@@ -24,6 +30,26 @@ const defaultRoutes = [
   {
     path: '/conversion',
     route: conversionRoute 
+  },
+  {
+    path: '/openai',
+    route: openaiRoute
+  },
+  {
+    path: '/contenthistory',
+    route: contentHistoryRoute
+  },
+  {
+    path: '/serialkiller',
+    route: serialKillerRoute
+  },
+  {
+    path: '/other',
+    route: otherRoute
+  },
+  {
+    path: '/costofliving',
+    route: costOfLivingRoute
   }
 ];
 
@@ -49,6 +75,27 @@ const devRoutes = [
     path: '/conversion',
     route: conversionRoute 
   }
+,
+  {
+    path: '/openai',
+    route: openaiRoute
+  },
+  {
+    path: '/contenthistory',
+    route: contentHistoryRoute},
+    {
+      path: '/serialkiller',
+      route: serialKillerRoute
+    
+    },
+    {
+      path: '/other',
+      route: otherRoute
+    },
+    {
+      path: '/costofliving',
+      route: costOfLivingRoute
+    }
 ];
 
 defaultRoutes.forEach((route) => {

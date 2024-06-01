@@ -10,3 +10,16 @@ yarn-error.log
 
 # Code coverage
 coverage
+*.mp4
+*.png
+*.gif
+*.jpg
+*.jpeg
+*.svg
+*.ico
+*.webp
+*.mp3
+*.wav
+
+
+

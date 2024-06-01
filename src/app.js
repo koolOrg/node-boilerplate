@@ -14,8 +14,20 @@ const routes = require('./routes/v1');
 const { errorConverter, errorHandler } = require('./middlewares/error');
 const ApiError = require('./utils/ApiError');
 const cookieParser = require('cookie-parser');
-
+// const fetchAndStoreWantedPerson = require('./routes/v1/wantedperson.route');
+const wantedPersonRoute = require('./routes/v1/wantedperson.route');
 const app = express();
+const { WantedPerson } = require('./models');
+
+
+// load serial killer load from utils
+// const serialKillerload = require('./utils/serialKillerload');
+
+// load cost of living  https://rapidapi.com/ditno-ditno-default/api/cities-cost-of-living1
+// const ci = require('./utils/costofliving');
+// this is to load serial killer data to mongodb
+// const sk = require('./utils/sk');
+// ci();
 
 if (config.env !== 'test') {
   app.use(morgan.successHandler);
@@ -40,7 +52,8 @@ app.use(cookieParser())
 // gzip compression
 app.use(compression());
 const corsOptions = {
-  origin: 'http://localhost:5000', // or use an array of origins if you have multiple clients
+  // origin: 'http://localhost:5000', // or use an array of origins if you have multiple clients
+  origin: ['http://localhost:3000', 'http://localhost:5000', 'http://localhost:3001'],
   credentials: true, // to allow cookies and credentials
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
@@ -57,6 +70,22 @@ if (config.env === 'production') {
   app.use('/v1/auth', authLimiter);
 }
 
+app.get('/get-all-from-mongo', async (req, res) => {
+  const data = await WantedPerson.find({});
+  res.send(data);
+  
+});
+
+app.get('/load-from-fbi', async (req, res) => {
+  const data = await wantedPersonRoute.fetchAndStoreWantedPerson();
+  res.send(data);
+});
+
+app.get('/load-fbi', async (req, res) => {
+  const data = await wantedPersonRoute.fetchOtherUsingApiKey();
+  res.send(data);
+
+});
 // v1 api routes
 app.use('/v1', routes);
 
@@ -70,5 +99,11 @@ app.use(errorConverter);
 
 // handle error
 app.use(errorHandler);
+
+// load serial killer data
+// serialKillerload();
+
+// serialKillerload();
+// sk()
 
 module.exports = app;
