@@ -15,7 +15,7 @@ import tokenTypes from '../config/tokens';
  * @param {string} [secret]
  * @returns {string}
  */
-const generateToken = (userId, expires, type, secret = _jwt.secret) => {
+export const generateToken = (userId, expires, type, secret = _jwt.secret) => {
   const payload = {
     sub: userId,
     iat: moment().unix(),
@@ -34,7 +34,7 @@ const generateToken = (userId, expires, type, secret = _jwt.secret) => {
  * @param {boolean} [blacklisted]
  * @returns {Promise<Token>}
  */
-const saveToken = async (token, userId, expires, type, blacklisted = false) => {
+export const saveToken = async (token, userId, expires, type, blacklisted = false) => {
   const tokenDoc = await Token.create({
     token,
     user: userId,
@@ -44,14 +44,26 @@ const saveToken = async (token, userId, expires, type, blacklisted = false) => {
   });
   return tokenDoc;
 };
-
+/**
+ * Revoke previous token login
+ * @param {*} userId
+ * @returns
+ */
+export const revokeToken = async (userId) => {
+  return Token.update(
+    {
+      is_blacklisted: true,
+    },
+    { where: { user_id: userId } },
+  );
+};
 /**
  * Verify token and return token doc (or throw an error if it is not valid)
  * @param {string} token
  * @param {string} type
  * @returns {Promise<Token>}
  */
-const verifyToken = async (token, type) => {
+export const verifyToken = async (token, type) => {
   const payload = jwt.verify(token, _jwt.secret);
   const tokenDoc = await Token.findOne({ token, type, user: payload.sub, blacklisted: false });
   if (!tokenDoc) {
@@ -65,14 +77,13 @@ const verifyToken = async (token, type) => {
  * @param {User} user
  * @returns {Promise<Object>}
  */
-const generateAuthTokens = async (user) => {
+export const generateAuthTokens = async (user) => {
   const accessTokenExpires = moment().add(_jwt.accessExpirationMinutes, 'minutes');
-  const accessToken = generateToken(user.id, accessTokenExpires, tokenTypes.ACCESS);
-
+  const accessToken = generateToken(user.user_id, accessTokenExpires, tokenTypes.ACCESS);
   const refreshTokenExpires = moment().add(_jwt.refreshExpirationDays, 'days');
-  const refreshToken = generateToken(user.id, refreshTokenExpires, tokenTypes.REFRESH);
-  await saveToken(refreshToken, user.id, refreshTokenExpires, tokenTypes.REFRESH);
-
+  const refreshToken = generateToken(user.user_id, refreshTokenExpires, tokenTypes.REFRESH);
+  await revokeToken(user.user_id);
+  await saveToken(refreshToken, user.user_id, refreshTokenExpires, tokenTypes.REFRESH);
   return {
     access: {
       token: accessToken,
@@ -90,14 +101,14 @@ const generateAuthTokens = async (user) => {
  * @param {string} email
  * @returns {Promise<string>}
  */
-const generateResetPasswordToken = async (email) => {
+export const generateResetPasswordToken = async (email) => {
   const user = await userService.getUserByEmail(email);
   if (!user) {
     throw new ApiError(NOT_FOUND, 'No users found with this email');
   }
   const expires = moment().add(_jwt.resetPasswordExpirationMinutes, 'minutes');
-  const resetPasswordToken = generateToken(user.id, expires, tokenTypes.RESET_PASSWORD);
-  await saveToken(resetPasswordToken, user.id, expires, tokenTypes.RESET_PASSWORD);
+  const resetPasswordToken = generateToken(user.user_id, expires, tokenTypes.RESET_PASSWORD);
+  await saveToken(resetPasswordToken, user.user_id, expires, tokenTypes.RESET_PASSWORD);
   return resetPasswordToken;
 };
 
@@ -106,18 +117,15 @@ const generateResetPasswordToken = async (email) => {
  * @param {User} user
  * @returns {Promise<string>}
  */
-const generateVerifyEmailToken = async (user) => {
+export const generateVerifyEmailToken = async (user) => {
   const expires = moment().add(_jwt.verifyEmailExpirationMinutes, 'minutes');
-  const verifyEmailToken = generateToken(user.id, expires, tokenTypes.VERIFY_EMAIL);
-  await saveToken(verifyEmailToken, user.id, expires, tokenTypes.VERIFY_EMAIL);
+  const verifyEmailToken = generateToken(user.user_id, expires, tokenTypes.VERIFY_EMAIL);
+  await saveToken(verifyEmailToken, user.user_id, expires, tokenTypes.VERIFY_EMAIL);
   return verifyEmailToken;
 };
-
-export default {
-  generateToken,
-  saveToken,
-  verifyToken,
-  generateAuthTokens,
-  generateResetPasswordToken,
-  generateVerifyEmailToken,
-};
+/**
+ *
+ * @param {import('sequelize').Filterable<Token>.where} where
+ * @returns
+ */
+export const findToken = async (where) => Token.findOne({ where });

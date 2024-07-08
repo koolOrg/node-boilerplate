@@ -1,0 +1,8 @@
+{
+    "watch": ["src/"],
+    "ext": "js,mjs,json, .env",
+    "execMap": {
+      "js": "node -r @swc/register"
+    }
+  }
+  

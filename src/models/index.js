@@ -1,13 +1,20 @@
 import Sequelize from 'sequelize';
-import User from './schema/User';
-import Token from './schema/Token';
 import { mysql } from '../config/config';
+import path from 'node:path';
+import fs from 'node:fs';
 
-const db = {};
-const models = {
-  User,
-  Token,
+const loadModels = () => {
+  let models = {};
+  const modelDir = path.join(__dirname, 'schema');
+  fs.readdirSync(modelDir).forEach((file) => {
+    if (file === 'Base.js') return;
+    if (!file.endsWith('.js')) return;
+    const model = require(path.join(modelDir, file)).default;
+    models[model.name] = model;
+  });
+  return models;
 };
+const models = loadModels();
 const sequelize = new Sequelize(mysql.url, {
   dialect: 'mysql',
   logging: true,
@@ -24,7 +31,7 @@ Object.keys(models).forEach((x) => {
 Object.keys(models).forEach((x) => {
   models[x].associate(models);
 });
-
+let db = {};
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 Object.assign(db, models);

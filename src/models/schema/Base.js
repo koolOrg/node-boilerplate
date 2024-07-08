@@ -1,6 +1,6 @@
 import { Model } from 'sequelize';
 
-class Base extends Model {
+export default class Base extends Model {
   static getAllWithPaging({ page, limit, where = {}, include = [], attributes, distinct = 'id', order = [] }) {
     const options = {
       order,
@@ -17,4 +17,3 @@ class Base extends Model {
     return this.findAndCountAll(options);
   }
 }
-export default Base;

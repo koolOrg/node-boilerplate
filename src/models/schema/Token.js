@@ -1,9 +1,7 @@
-/* eslint-disable no-unused-vars */
-
 import Sequelize from 'sequelize';
 import Base from './Base';
 
-class Token extends Base {
+export default class Token extends Base {
   /**
    * Helper method for defining associations.
    * This method is not a part of Sequelize lifecycle.
@@ -29,8 +27,7 @@ class Token extends Base {
         freezeTableName: true,
         tableName: 'tokens',
         timestamps: true,
-      }
+      },
     );
   }
 }
-export default Token;

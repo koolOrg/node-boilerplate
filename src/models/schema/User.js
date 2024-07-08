@@ -1,7 +1,7 @@
 import Sequelize from 'sequelize';
 import Base from './Base';
 
-class User extends Base {
+export default class User extends Base {
   /**
    * Helper method for defining associations.
    * This method is not a part of Sequelize lifecycle.
@@ -18,6 +18,15 @@ class User extends Base {
           type: Sequelize.INTEGER,
           autoIncrement: true,
           primaryKey: true,
+        },
+        fullname: {
+          type: Sequelize.STRING,
+        },
+        email: {
+          type: Sequelize.STRING,
+        },
+        phone: {
+          type: Sequelize.STRING,
         },
         username: {
           type: Sequelize.STRING,
@@ -46,8 +55,7 @@ class User extends Base {
         freezeTableName: true,
         tableName: 'users',
         timestamps: true,
-      }
+      },
     );
   }
 }
-export default User;

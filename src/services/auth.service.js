@@ -1,9 +1,7 @@
 import httpStatus from 'http-status';
-import tokenService from './token.service';
-import userService from './user.service';
 import ApiError from '../utils/ApiError';
 import tokenTypes from '../config/tokens';
-import Token from '../models/schema/Token';
+import { tokenService, userService } from '.';
 /**
  * Login with username and password
  * @param {string} email
@@ -24,8 +22,10 @@ const loginUserWithEmailAndPassword = async (email, password) => {
  * @returns {Promise}
  */
 const logout = async (refreshToken) => {
-  const refreshTokenDoc = await Token.findOne({
-    where: { token: refreshToken, type: tokenTypes.REFRESH, blacklisted: false },
+  const refreshTokenDoc = await tokenService.findToken({
+    token: refreshToken,
+    type: tokenTypes.REFRESH,
+    blacklisted: false,
   });
   if (!refreshTokenDoc) {
     throw new ApiError(httpStatus.NOT_FOUND, 'Not found');
@@ -65,8 +65,8 @@ const resetPassword = async (resetPasswordToken, newPassword) => {
     if (!user) {
       throw new Error();
     }
-    await userService.updateUserById(user.id, { password: newPassword });
-    await userService.deleteMany({ user: user.id, type: tokenTypes.RESET_PASSWORD });
+    await userService.updateUserById(user.user_id, { password: newPassword });
+    await userService.deleteMany({ user: user.user_id, type: tokenTypes.RESET_PASSWORD });
   } catch (error) {
     throw new ApiError(httpStatus.UNAUTHORIZED, 'Password reset failed');
   }
