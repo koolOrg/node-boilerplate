@@ -52,26 +52,26 @@ describe('Auth routes', () => {
       });
     });
 
-    test('should return 400 error if email is invalid', async () => {
+    test('should return 404 error if email is invalid', async () => {
       newUser.email = 'invalidEmail';
 
       await request(app).post('/v1/auth/register').send(newUser).expect(httpStatus.BAD_REQUEST);
     });
 
-    test('should return 400 error if email is already used', async () => {
+    test('should return 409 error if email is already used', async () => {
       await insertUsers([userOne]);
       newUser.email = userOne.email;
 
       await request(app).post('/v1/auth/register').send(newUser).expect(httpStatus.BAD_REQUEST);
     });
 
-    test('should return 400 error if password length is less than 8 characters', async () => {
+    test('should return 411 error if password length is less than 8 characters', async () => {
       newUser.password = 'passwo1';
 
       await request(app).post('/v1/auth/register').send(newUser).expect(httpStatus.BAD_REQUEST);
     });
 
-    test('should return 400 error if password does not contain both letters and numbers', async () => {
+    test('should return 417 error if password does not contain both letters and numbers', async () => {
       newUser.password = 'password';
 
       await request(app).post('/v1/auth/register').send(newUser).expect(httpStatus.BAD_REQUEST);
